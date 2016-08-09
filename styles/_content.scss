@@ -1,0 +1,284 @@
+body {
+	// background-color: crimson;
+	background-image: url("../images/queenDarkRed.jpg");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 100vh;
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+	background-color: #111;
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.8;
+	font-size: 16px;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1 {
+	font-family: 'Fugaz One', cursive;
+	font-size: 50px;
+	background-color: #39060D;
+	padding: 30px 0;
+	margin: 0;
+	color: white;
+
+	span {
+		color: #E67E83;
+		font-size: 12px;
+		letter-spacing: 2px;
+		font-family: Roboto, sans-serif;
+		text-transform: uppercase;
+		display: block;	
+	}
+}
+
+h3 {
+	font-family: 'Fugaz One', cursive;
+	margin: 40px 0;
+	font-size: 24px;
+}
+
+a {
+	font-weight: bold;
+	color: #c9162c;
+	text-decoration: none;
+	transition: all 0.3s;
+		&:hover {
+			color: #c9162c;
+		}
+}
+
+.wrapper {
+	max-width: 800px;
+	margin: 40px auto;
+	background-color: white;
+	padding: 10px 30px;
+	text-align: center;
+	border-radius: 20px;
+}
+
+.hide {
+	display: none;
+	transition: all 0.5s;
+}
+
+header {
+	text-align: center;
+
+	h2 {
+		color: white;
+		margin: 30px 0;
+	}
+}
+
+fieldset {
+	border-top: none;
+	border-bottom: 1px solid #DBDBDB;
+	border-left: none;
+	border-right: none;
+}
+
+	
+.labels {
+	display: flex;
+	margin: 10px;
+	justify-content: center;
+		
+	label {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 33.33%;
+		border-bottom: 1px solid white;
+		transition: all .3s;
+		cursor: pointer;
+		margin: 0;
+		padding:0;
+			&:hover svg {
+			transform: scale(1.1);
+			}
+		}
+		svg {
+			max-width: 125px;
+			max-height: 100px;
+			transition: all .3s;
+		}
+}
+
+input[type="radio"] {
+	opacity: 0;
+
+	&:focus + label, &:checked + label {
+		fill: #bf0303;
+		color: #bf0303;
+	}
+}
+
+input[type="submit"], button {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom-width: 7px;
+	background-color: #c9162c;
+	padding: 30px;
+	margin: 30px;
+	font-family: 'Fugaz One', cursive;
+	font-size: 22px;
+	border-radius: 20px;
+	// border-bottom: 5px;
+	border-bottom-color: darken(#bf0303, 5);
+	color: #FFF;
+
+		&:active {
+			border-bottom: 7px solid white;
+			transform: translateY(7px);
+		}
+
+		&:focus {
+			outline: none;
+			color: #39060D;
+
+		}
+}
+
+.dateResult {
+	h2 {
+		font-family: 'Fugaz One', cursive;
+		font-size: 30px;
+		padding: 0 0 30px 0;
+		margin-bottom: 0;
+	}
+	
+	p {
+		text-align: left;
+	}
+
+	a {
+		text-align: center;
+		color: #bf0303;
+		display: block;
+		text-transform: uppercase;
+		&:hover {
+			color: #BF2F3A;
+		}
+	}
+}
+
+
+.pickUpLine {
+	text-align: center;
+	margin-top: 60px;
+
+	h2 {
+		font-size: 20px;
+		padding: 20px 0 0;
+		border-top: 1px solid #DBDBDB; 
+	}
+
+	h3 {
+		margin: 20px 0;
+
+	}
+}
+
+.pickUpLine, .dateResult p, .dateResult a {
+	max-width: 600px;
+	margin: 20px auto;
+}
+
+footer {
+	background-color: #111;
+	width: 100%;
+	text-align: center;
+	color: #FFF;
+	font-size: 12px;
+	padding: 20px 0;
+
+	a {
+		color: #FFF;
+	}
+	
+	.credits {
+		cursor: pointer;
+	}
+
+	.iconCredit {
+			font-size: 12px;
+		p {
+			margin: 0 auto;
+			text-align: center;
+		}
+		a:hover {
+			color: #bf0303;
+		}
+	}
+ 
+}
+ 
+ 
+@media screen and (max-width: 800px) {
+	.wrapper {
+		max-width: 600px;
+	}
+
+	h3 {
+		font-size: 26px;
+	}
+
+} // end 800px breakpoint 
+
+@media screen and (max-width: 700px) {
+	.wrapper {
+		max-width: 500px;
+	}
+
+		.labels {
+		flex-direction: column;
+			label {
+			margin: auto;
+			
+			svg {
+				width: 150px;
+				height: 100px;
+				}
+			}
+	}
+
+} // end 700px breakpoint 
+
+@media screen and (max-width: 500px) {
+	body {
+		font-size: 14px; 
+	}
+
+	.wrapper {
+		border-radius: 0;
+	}
+
+	input[type="submit"], button {
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		border-bottom-width: 7px;
+		background-color: #c9162c;
+		padding: 30px;
+		margin: 30px;
+		font-family: 'Fugaz One', cursive;
+		font-size: 16px;
+		border-radius: 20px;
+		border-bottom-color: darken(#bf0303, 5);
+		color: #FFF;
+	}
+
+
+h1 {
+	span {
+		font-size: 11px;
+		letter-spacing: 1px;
+	}
+}
+
+} // end 500px breakpoint
